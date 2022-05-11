@@ -1,16 +1,21 @@
-import CartIcon from '../Cart/CartIcon';
-import classes from './HeaderCartButton.module.css';
+import { Fragment } from 'react';
 
-const HeaderCartButton = (props) => {
-    return (
-        <button className={classes.button}>
-            <span className={classes.icon}>
-                <CartIcon />
-            </span>
-            <span>Your Cart</span>
-            <span className={classes.badge}>3</span>
-        </button>
-    );
+import HeaderCartButton from './HeaderCartButton';
+import mealsImage from '../../assets/meals.jpg';
+import classes from './Header.module.css';
+
+const Header = (props) => {
+  return (
+    <Fragment>
+      <header className={classes.header}>
+        <h1>ReactMeals</h1>
+        <HeaderCartButton onClick={props.onShowCart} />
+      </header>
+      <div className={classes['main-image']}>
+        <img src={mealsImage} alt='A table full of delicious food!' />
+      </div>
+    </Fragment>
+  );
 };
 
-export default HeaderCartButton;
+export default Header;

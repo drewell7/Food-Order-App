@@ -48,7 +48,7 @@ const AvailableMeals = () => {
                 </ul>
             </Card>
         </section>
-    )
+    );
 };
 
 export default AvailableMeals;
